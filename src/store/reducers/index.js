@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-// import PomodoroReducer from './pomodoro_reducer';
+import LostPetsReducer from './lost_pets_reducer';
 
 const rootReducer = combineReducers({
-  // timer: PomodoroReducer
+  lost_pets: LostPetsReducer
 })
 
 export default rootReducer

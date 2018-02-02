@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 
 class LostPets extends Component {
   render() {
-
+    lostPets = this.props.lostPets
     return (
       <div>
 
@@ -16,7 +16,7 @@ class LostPets extends Component {
 
 const mapStateToProps = state => {
   return {
-
+    pets: lostPets.lost_pets
   }
 };
 

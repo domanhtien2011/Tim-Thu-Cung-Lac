@@ -169,6 +169,7 @@ const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
+
       </Grid>
     </Segment>
 
