@@ -16,6 +16,8 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
+import LostPets from '../containers/LostPets/LostPets'
+
 /* eslint-disable react/no-multi-comp */
 /* Heads up! HomepageHeading uses inline styling, however it's not the best practice. Use CSS or styled components for
  * such things.
@@ -81,10 +83,10 @@ class DesktopContainer extends Component {
               size='large'
             >
               <Container>
-                <Menu.Item as='a' active>Home</Menu.Item>
+                {/* <Menu.Item as='a' active>Home</Menu.Item>
                 <Menu.Item as='a'>Work</Menu.Item>
                 <Menu.Item as='a'>Company</Menu.Item>
-                <Menu.Item as='a'>Careers</Menu.Item>
+                <Menu.Item as='a'>Careers</Menu.Item> */}
                 <Menu.Item position='right'>
                   <Button as='a' inverted={!fixed}>Log in</Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>Sign Up</Button>
@@ -94,7 +96,7 @@ class DesktopContainer extends Component {
             {/* <HomepageHeading /> */}
           </Segment>
         </Visibility>
-
+        {console.log(children)}
         {children}
       </Responsive>
     )
@@ -118,10 +120,10 @@ class MobileContainer extends Component {
       <Responsive {...Responsive.onlyMobile}>
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
-            <Menu.Item as='a' active>Home</Menu.Item>
+            {/* <Menu.Item as='a' active>Home</Menu.Item>
             <Menu.Item as='a'>Work</Menu.Item>
             <Menu.Item as='a'>Company</Menu.Item>
-            <Menu.Item as='a'>Careers</Menu.Item>
+            <Menu.Item as='a'>Careers</Menu.Item> */}
             <Menu.Item as='a'>Log in</Menu.Item>
             <Menu.Item as='a' primary>Sign Up</Menu.Item>
           </Sidebar>
@@ -169,7 +171,7 @@ const HomepageLayout = () => (
   <ResponsiveContainer>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
-
+        <LostPets />
       </Grid>
     </Segment>
 

@@ -1,7 +1,6 @@
-import axios from 'axios'
 
 const initialState = {
-  lostPets: 0
+  test: true
 };
 
 export default function (state = initialState, action) {
