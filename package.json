@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.17.1",
+    "bloomer": "^0.6.3",
+    "bulma": "^0.6.2",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -11,8 +13,7 @@
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "semantic-ui-css": "^2.2.14",
-    "semantic-ui-react": "^0.77.2"
+    "semantic-ui-css": "^2.2.14"
   },
   "scripts": {
     "start": "react-scripts start",

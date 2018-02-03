@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from 'axios'
-import { Card } from 'semantic-ui-react'
 import Pet from '../../components/Pet'
 
 class LostPets extends Component {
@@ -32,15 +31,11 @@ class LostPets extends Component {
   render() {
     const listPets = this.state.lostPets.map((pet) => {
       return (
-        <Card.Group itemsPerRow={11}>
-          <Pet pet={pet} />
-        </Card.Group>
+        <Pet pet={pet} />
       )
     })
     return (
-      <div>
-        {listPets}
-      </div>
+      listPets
     );
   }
 }

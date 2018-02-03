@@ -1,22 +1,9 @@
 import React from 'react';
-import { Card, Image, Icon } from 'semantic-ui-react'
 
 const Pet = (props) => {
+  const img_url = 'https://loremflickr.com/320/240/dog'
   return (
-    <Card>
-      {/* <Image src='/assets/images/avatar/large/daniel.jpg' /> */}
-      <Card.Content>
-        <Card.Header>Daniel</Card.Header>
-        <Card.Meta>Joined in 2016</Card.Meta>
-        <Card.Description>Daniel is a comedian living in Nashville.</Card.Description>
-      </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name='user' />
-          10 Friends
-        </a>
-      </Card.Content>
-    </Card>
+    <div>Hello pets</div>
   );
 };
 
