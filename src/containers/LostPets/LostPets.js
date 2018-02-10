@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Columns, Column } from 'bloomer'
 import axios from 'axios'
 import Pet from '../../components/Pet'
 
@@ -13,7 +14,7 @@ class LostPets extends Component {
   }
 
   componentWillMount() {
-    axios.get('http://localhost:8000/lost_pets')
+    axios.get('http://192.168.1.47:5000/lost_pets')
       .then((response) => {
         console.log('Success response: ', response.data);
         this.setState({
@@ -31,11 +32,15 @@ class LostPets extends Component {
   render() {
     const listPets = this.state.lostPets.map((pet) => {
       return (
-        <Pet pet={pet} />
+        <Column isSize="1/4" >
+          <Pet pet={pet} />
+        </Column>
       )
     })
     return (
-      listPets
+      <Columns isMultiline>
+        {listPets}
+      </Columns>
     );
   }
 }
