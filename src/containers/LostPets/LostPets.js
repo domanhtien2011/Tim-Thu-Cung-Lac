@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Columns, Column } from 'bloomer'
 import axios from 'axios'
+import { Route } from 'react-router-dom'
 import Pet from '../../components/Pet'
+import PetInfo from '../../components/PetInfo'
 
 class LostPets extends Component {
   constructor(props) {
@@ -32,9 +34,12 @@ class LostPets extends Component {
   render() {
     const listPets = this.state.lostPets.map((pet) => {
       return (
-        <Column isSize="1/4" >
-          <Pet pet={pet} />
-        </Column>
+        <div>
+          <Column isSize="1/4" >
+            <Pet pet={pet}></Pet>
+          </Column>
+          <Route path='../components/PetInfo.js' component={PetInfo}></Route>
+        </div>
       )
     })
     return (
